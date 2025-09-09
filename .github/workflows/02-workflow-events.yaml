@@ -1,0 +1,9 @@
+name: 02-workflow-events
+on:
+    workflow_dispatch:
+jobs:
+    name: trigger workflows
+    runs-on: ubuntu-latest
+    steps:
+        - name: Trigger manually
+          run: echo "This workflow was triggered ${{ github.event_name }}!"
